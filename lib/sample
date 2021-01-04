@@ -1,0 +1,51 @@
+
+ Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Form(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                    child: Material(
+                      elevation: 5,
+                      child: Container(
+                          height: 48,
+                          decoration: BoxDecoration(boxShadow: [
+                            BoxShadow(
+                              color: Colors.red[200],
+                              offset: Offset(3, 6),
+                              spreadRadius: 2,
+                              blurRadius: 6,
+                            ),
+                            BoxShadow(
+                              color: Colors.white,
+                              offset: Offset(-2, -3),
+                              spreadRadius: -1,
+                              blurRadius: 20,
+                            ),
+                          ]),
+                          child: buildTextFormField()),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: buildFlatButton(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+
+           enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25),
+              borderSide: BorderSide(color: Colors.red[300], width: 2)),
+          focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(25),
+              borderSide: BorderSide(color: Colors.red[300], width: 2)),
